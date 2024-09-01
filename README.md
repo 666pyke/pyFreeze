@@ -7,6 +7,7 @@ Easily freeze players and take control during screenshares!
 ## 👀 Overview
 PyFreeze is a Minecraft plugin designed to help administrators easily freeze players during screenshares or other administrative activities. When a player is frozen, they cannot move, open menus, or execute commands (unless allowed by the admin). This plugin is particularly useful in monitoring and controlling player activities to ensure a fair gameplay environment.
 
+
 ## 🚀 Features
 - 🟢 **Player Freeze Command:** Instantly freeze players to prevent them from moving or performing any actions.
 - 🟢 **Customizable Notifications:** Send customizable messages to frozen players, including titles and chat notifications.
@@ -14,6 +15,7 @@ PyFreeze is a Minecraft plugin designed to help administrators easily freeze pla
 - 🟢 **Link Notifications:** Periodically send a customizable message with a link to frozen players.
 - 🟢 **Command Whitelist:** Allows frozen players to execute specific commands as defined by the admin.
 - 🟢 **Particle Effects:** Display customizable particle effects around frozen players for a visual indication.
+![ezgif-2-72da90029e](https://github.com/user-attachments/assets/5215e8fe-ff5c-42cc-870c-d6a7871a0260)
 
 ## ⚙️ Configuration
 
