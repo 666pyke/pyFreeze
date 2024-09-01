@@ -18,31 +18,46 @@ PyFreeze is a Minecraft plugin designed to help administrators easily freeze pla
 ## ⚙️ Configuration
 
 ```yaml
-plugin-enabled: true
+# pyFreeze 1.0 - 666pyke
 
-freeze-settings:
-  send-link: true
-  link-message-interval: 10
-  particle-type: "SNOWFLAKE"
-  particle-interval: 20
-  works-in-creative: false
+# Basic Messages
+usage-message: "§8「§cFreeze§8」§7» &fUsage: &c/pyfreeze <player> [link]"
+reload-message: "§8「§creeze§8」§7» &aPyFreeze config reloaded!"
+no-permission-message: "§8「§cFreeze§8」§7» &fYou don't have permission to reload the plugin."
+usage-unfreeze-message: "§8「§cFreeze§8」§7» &fUsage: /pyfreeze unfreeze <player>"
+player-not-found-message: "§8「§cFreeze§8」§7» &fPlayer not found."
+unfreeze-success-message: "§8「§cFreeze§8」§7» &fPlayer &c{player}&f has been unfrozen."
+not-frozen-message: "§8「§cFreeze§8」§7» &fPlayer &c{player}&f is not frozen."
+freeze-success-message: "§8「§cFreeze§8」§7» &fPlayer &c{player}&f has been frozen."
 
-messages:
-  freeze-message: "&cYou have been frozen!"
-  unfreeze-message: "&aYou have been unfrozen!"
-  quit-message: "&e{player} has disconnected while frozen!"
-  title-message: "&cYou have been frozen by an admin!"
-  subtitle-message: "&7You cannot move."
-  command-blocked-message: "&cYou cannot use this command while frozen!"
-  link-message: "&ePlease check this link: {link}"
-  reload-message: "&aPyFreeze config has been reloaded!"
-  usage-message: "&cUsage: /pyfreeze <player> [link] or /pyfreeze unfreeze <player> or /pyfreeze reload"
-  no-permission-message: "&cYou don't have permission to reload the plugin."
+# Messages to the frozen player.
+freeze-message: "§8「§cFreeze§8」§7» &fYou have been frozen by an admin!"
+title-message: "&b❄ &b&lFROZEN! &b❄"
+subtitle-message: "&fYou have been frozen by an admin!"
+unfreeze-message: "§8「§cFreeze§8」§7» &fYou have been unfrozen and can now move again."
+command-blocked-message: "§8「§cFreeze§8」§7» &fYou cannot use this command while frozen!"
 
+# Quit when frozen
+quit-message: "§8「§cFreeze§8」§7» &c{player}&f has disconnected while frozen!"
+
+# The message sent periodically to the frozen player if a link was specified.
+# {link} will be replaced with the link provided in the command /pyfreeze <player> <link>
+
+link-message: "§8「§cFreeze§8」§7» &fPlease check this link: &4&n{link}"
+
+# The time interval (in seconds) at which the link message will be sent to the frozen player.
+link-message-interval: 10
+
+# The list of allowed commands that frozen players can use.
+# Each command should be added without the / character at the beginning.
 commands-whitelist:
   - msg
   - help
   - tell
+
+# Particle settings
+particle-type: "SNOWFLAKE"
+particle-interval: 60
 ```
 
 ## 🛠 How It Works
