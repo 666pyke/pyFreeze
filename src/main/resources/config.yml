@@ -16,6 +16,7 @@ title-message: "&b❄ &b&lFROZEN! &b❄"
 subtitle-message: "&fYou have been frozen by an admin!"
 unfreeze-message: "§8「§cFreeze§8」§7» &fYou have been unfrozen and can now move again."
 command-blocked-message: "§8「§cFreeze§8」§7» &fYou cannot use this command while frozen!"
+cannotdrop-message: "§8「§cFreeze§8」§7» &fYou cannot drop items while frozen!"
 
 # Quit when frozen
 quit-message: "§8「§cFreeze§8」§7» &c{player}&f has disconnected while frozen!"

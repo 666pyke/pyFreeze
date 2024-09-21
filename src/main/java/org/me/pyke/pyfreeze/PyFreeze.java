@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
+import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -93,6 +94,16 @@ public final class PyFreeze extends JavaPlugin implements Listener {
         Player player = event.getPlayer();
         if (isPlayerFrozen(player.getName())) {
             event.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onPlayerDropItem(PlayerDropItemEvent event){
+        Player player = event.getPlayer();
+        if (isPlayerFrozen(player.getName())){
+            event.setCancelled(true);
+            String cannotDrop = config.getString("cannotdrop-message", "&aYou cannot drop items while frozen!");
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', cannotDrop));
         }
     }
 
